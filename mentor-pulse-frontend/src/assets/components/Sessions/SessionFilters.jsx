@@ -82,3 +82,4 @@ const SessionFilters = ({ show, onHide, filters, onFilterChange }) => {
 };
 
 export default SessionFilters;
+

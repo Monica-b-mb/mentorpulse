@@ -161,3 +161,4 @@ export const getMockMessages = () => [
     createdAt: new Date().toISOString()
   }
 ];
+

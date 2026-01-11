@@ -135,3 +135,4 @@ const ProgressStats = ({ statistics }) => {
 };
 
 export default ProgressStats;
+

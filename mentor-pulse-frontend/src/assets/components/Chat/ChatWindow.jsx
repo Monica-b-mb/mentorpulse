@@ -328,3 +328,4 @@ const ChatWindow = ({ chat, onBack }) => {
 };
 
 export default ChatWindow;
+

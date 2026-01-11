@@ -223,3 +223,4 @@ const GoalModal = ({ show, onHide, onGoalCreated }) => {
 };
 
 export default GoalModal;
+

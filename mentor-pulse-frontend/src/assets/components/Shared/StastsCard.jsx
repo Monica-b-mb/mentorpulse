@@ -44,3 +44,4 @@ const StatsCard = ({ title, value, icon, color, subtitle }) => {
 };
 
 export default StatsCard;
+

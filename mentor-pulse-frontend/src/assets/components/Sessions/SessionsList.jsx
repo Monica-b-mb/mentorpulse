@@ -254,3 +254,4 @@ const styles = {
 };
 
 export default SessionsList;
+

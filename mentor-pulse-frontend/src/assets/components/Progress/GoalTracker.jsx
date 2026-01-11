@@ -230,3 +230,4 @@ const GoalTracker = ({ goals, onGoalUpdate }) => {
 };
 
 export default GoalTracker;
+

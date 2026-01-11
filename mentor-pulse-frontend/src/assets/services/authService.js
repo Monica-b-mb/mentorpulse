@@ -9,3 +9,4 @@ export const authService = {
     console.log('Register called with:', userData);
   }
 };
+

@@ -114,3 +114,4 @@ const ProgressTimeline = ({ activities }) => {
 };
 
 export default ProgressTimeline;
+

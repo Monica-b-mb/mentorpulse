@@ -58,3 +58,4 @@ export const authUtils = {
     return !!authUtils.getToken();
   }
 };
+

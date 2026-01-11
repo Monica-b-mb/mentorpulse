@@ -8,3 +8,4 @@ export const validators = {
     return value !== null && value !== undefined && value !== '';
   }
 };
+

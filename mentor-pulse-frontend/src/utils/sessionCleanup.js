@@ -26,3 +26,4 @@ export const updateSessionStatuses = async () => {
 // Run on server start and schedule daily
 updateSessionStatuses();
 setInterval(updateSessionStatuses, 24 * 60 * 60 * 1000); // Daily
+

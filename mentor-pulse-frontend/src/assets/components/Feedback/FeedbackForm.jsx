@@ -190,3 +190,4 @@ const FeedbackForm = ({ session, onFeedbackSubmitted, onCancel }) => {
 };
 
 export default FeedbackForm;
+

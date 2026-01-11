@@ -142,3 +142,4 @@ const SessionCard = ({ session, onGiveFeedback }) => {
 };
 
 export default FeedbackPrompt;
+

@@ -23,3 +23,4 @@ export const setupSocketEvents = (socket, setIsConnected) => {
     socket.off('disconnect');
   };
 };
+

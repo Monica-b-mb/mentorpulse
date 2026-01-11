@@ -47,3 +47,4 @@ const PendingApprovals = () => {
 };
 
 export default PendingApprovals;
+

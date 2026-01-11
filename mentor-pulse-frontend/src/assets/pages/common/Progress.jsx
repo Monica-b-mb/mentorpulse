@@ -532,3 +532,4 @@ const EnhancedAchievementsSection = () => {
 };
 
 export default Progress;
+

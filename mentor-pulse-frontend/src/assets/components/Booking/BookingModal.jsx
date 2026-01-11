@@ -904,3 +904,4 @@ const StyleInjector = () => (
 );
 
 export default BookingModal;
+

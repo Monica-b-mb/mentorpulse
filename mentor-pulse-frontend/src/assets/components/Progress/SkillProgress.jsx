@@ -54,3 +54,4 @@ const SkillProgress = () => {
 };
 
 export default SkillProgress;
+

@@ -516,3 +516,4 @@ const WeeklyCalendar = ({ timezone: initialTimezone, onAvailabilityChange }) => 
 };
 
 export default WeeklyCalendar;
+

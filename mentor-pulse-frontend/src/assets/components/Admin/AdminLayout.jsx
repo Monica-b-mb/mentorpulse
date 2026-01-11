@@ -250,3 +250,4 @@ const AdminLayout = ({ children, activeTab, onTabChange }) => {
 };
 
 export default AdminLayout;
+
