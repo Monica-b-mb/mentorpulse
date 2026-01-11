@@ -39,7 +39,7 @@ const Register = () => {
 
       const body = JSON.stringify({ name, email, password, role });
 
-      const res = await axios.post('http://localhost:5000/api/auth/register', body, config);
+      const res = await axios.post('https://mentorpulse.onrender.com/api/auth/register', body, config);
       
       // DEBUG: Check response structure
       console.log('Register API Response:', res.data);

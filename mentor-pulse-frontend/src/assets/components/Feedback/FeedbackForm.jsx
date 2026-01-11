@@ -28,7 +28,7 @@ const FeedbackForm = ({ session, onFeedbackSubmitted, onCancel }) => {
     setIsSubmitting(true);
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch('http://localhost:5000/api/feedback/submit', {
+      const response = await fetch('https://mentorpulse.onrender.com/api/feedback/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

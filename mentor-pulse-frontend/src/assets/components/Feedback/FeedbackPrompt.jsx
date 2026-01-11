@@ -15,7 +15,7 @@ const FeedbackPrompt = () => {
   const loadCompletedSessions = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch('http://localhost:5000/api/sessions/completed', {
+      const response = await fetch('https://mentorpulse.onrender.com/api/sessions/completed', {
         headers: {
           'Authorization': `Bearer ${token}`
         }

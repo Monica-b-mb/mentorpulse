@@ -16,7 +16,7 @@ const SessionsList = () => {
     try {
       setLoading(true);
       const token = localStorage.getItem('token');
-      const response = await axios.get('http://localhost:5000/api/sessions/my-sessions', {
+      const response = await axios.get('https://mentorpulse.onrender.com/api/sessions/my-sessions', {
         headers: { Authorization: `Bearer ${token}` }
       });
 

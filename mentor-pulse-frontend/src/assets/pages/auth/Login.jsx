@@ -30,7 +30,7 @@ const Login = () => {
   const setupAdminAccount = async () => {
     setSetupLoading(true);
     try {
-      const res = await axios.post('http://localhost:5000/api/auth/setup-admin');
+      const res = await axios.post('https://mentorpulse.onrender.com/api/auth/setup-admin');
       
       toast.success(
         <div>
@@ -70,8 +70,8 @@ const Login = () => {
 
     // ✅ Use admin login endpoint for admin mode
     const endpoint = showAdminLogin
-      ? 'http://localhost:5000/api/auth/admin/login'
-      : 'http://localhost:5000/api/auth/login';
+      ? 'https://mentorpulse.onrender.com/api/auth/admin/login'
+      : 'https://mentorpulse.onrender.com/api/auth/login';
 
     const res = await axios.post(endpoint, body, config);
     console.log('Login API Response:', res.data);
@@ -163,7 +163,7 @@ const Login = () => {
 
       const body = JSON.stringify({ email, password });
 
-      const res = await axios.post('http://localhost:5000/api/auth/login', body, config);
+      const res = await axios.post('https://mentorpulse.onrender.com/api/auth/login', body, config);
       
       console.log('Login API Response:', res.data);
       

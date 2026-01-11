@@ -20,7 +20,7 @@ const FeedbackList = ({ mentorId }) => {
       });
 
       const response = await fetch(
-        `http://localhost:5000/api/feedback/mentor/${mentorId}?${queryParams}`,
+        `https://mentorpulse.onrender.com/api/feedback/mentor/${mentorId}?${queryParams}`,
         {
           headers: {
             'Authorization': `Bearer ${token}`

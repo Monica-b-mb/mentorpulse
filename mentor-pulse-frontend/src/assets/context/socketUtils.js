@@ -2,7 +2,7 @@ import { io } from 'socket.io-client';
 
 // Socket instance creation
 export const createSocket = () => {
-  const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+  const apiUrl = import.meta.env.VITE_API_URL || 'https://mentorpulse.onrender.com/api';
   return io(apiUrl);
 };
 

@@ -60,7 +60,7 @@ const FeedbackWizard = ({ sessions, selectedSession, onComplete, onCancel }) => 
       
       // Submit session feedback
       if (sessionFeedback.rating > 0) {
-        const sessionResponse = await fetch('http://localhost:5000/api/feedback/submit', {
+        const sessionResponse = await fetch('https://mentorpulse.onrender.com/api/feedback/submit', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -79,7 +79,7 @@ const FeedbackWizard = ({ sessions, selectedSession, onComplete, onCancel }) => 
 
       // Submit platform feedback (if provided)
       if (platformFeedback.rating > 0) {
-        const platformResponse = await fetch('http://localhost:5000/api/feedback/platform', {
+        const platformResponse = await fetch('https://mentorpulse.onrender.com/api/feedback/platform', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

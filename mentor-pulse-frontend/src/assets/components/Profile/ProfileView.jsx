@@ -28,7 +28,7 @@ const ProfileView = ({ mentorId, isOpen, onClose }) => {
   const fetchMentorProfile = async () => {
     try {
       setLoading(true);
-      const response = await axios.get(`http://localhost:5000/api/mentors/${mentorId}`);
+      const response = await axios.get(`https://mentorpulse.onrender.com/api/mentors/${mentorId}`);
       const mentorData = response.data;
       setMentor(mentorData);
       setStats(mentorData.stats || {

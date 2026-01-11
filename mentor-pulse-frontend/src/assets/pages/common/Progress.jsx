@@ -34,7 +34,7 @@ const Progress = () => {
     try {
       setLoading(true);
       const token = localStorage.getItem('token');
-      const response = await fetch('http://localhost:5000/api/progress/dashboard', {
+      const response = await fetch('https://mentorpulse.onrender.com/api/progress/dashboard', {
         headers: {
           'Authorization': `Bearer ${token}`
         }

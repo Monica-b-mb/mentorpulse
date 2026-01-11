@@ -5,5 +5,5 @@ export const APP_CONSTANTS = {
     MENTOR: 'mentor',
     MENTEE: 'mentee'
   },
-  API_BASE_URL: 'http://localhost:5000/api'
+  API_BASE_URL: 'https://mentorpulse.onrender.com/api'
 };

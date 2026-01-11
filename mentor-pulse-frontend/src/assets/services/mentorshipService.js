@@ -1,5 +1,5 @@
 import axios from 'axios';
-const API = 'http://localhost:5000/api/mentorship';
+const API = 'https://mentorpulse.onrender.com/api/mentorship';
 
 export const mentorshipService = {
   sendRequest: async (mentorId, data) => {

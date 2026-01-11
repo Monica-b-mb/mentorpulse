@@ -14,7 +14,7 @@ const SocketProvider = ({ children }) => {
       return;
     }
 
-    const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+    const apiUrl = import.meta.env.VITE_API_URL || 'https://mentorpulse.onrender.com/api';
     
     console.log('🔌 Attempting socket connection to:', apiUrl);
     

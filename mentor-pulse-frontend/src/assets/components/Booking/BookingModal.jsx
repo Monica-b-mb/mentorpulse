@@ -45,7 +45,7 @@ const BookingModal = ({ isOpen, onClose, mentor, sessionType: propSessionType, o
     try {
       const token = localStorage.getItem('token');
       const response = await axios.get(
-        `http://localhost:5000/api/availability/mentor/${mentor._id}?date=${date}`,
+        `https://mentorpulse.onrender.com/api/availability/mentor/${mentor._id}?date=${date}`,
         { headers: { Authorization: `Bearer ${token}` } }
       );
 
@@ -125,7 +125,7 @@ const BookingModal = ({ isOpen, onClose, mentor, sessionType: propSessionType, o
     console.log('📤 Booking payload:', payload);
 
     const response = await axios.post(
-      'http://localhost:5000/api/sessions/book',
+      'https://mentorpulse.onrender.com/api/sessions/book',
       payload,
       { headers: { Authorization: `Bearer ${token}` } }
     );

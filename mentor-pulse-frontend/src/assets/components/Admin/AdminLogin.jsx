@@ -30,7 +30,7 @@ const AdminLogin = () => {
 
     try {
       // Use the regular login endpoint (NOT admin/login)
-     const response = await axios.post('http://localhost:5000/api/auth/admin/login', formData);
+     const response = await axios.post('https://mentorpulse.onrender.com/api/auth/admin/login', formData);
 
       
       // Check if user is admin
@@ -60,7 +60,7 @@ const AdminLogin = () => {
   const setupAdminAccount = async () => {
     setLoading(true);
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/setup-admin');
+      const response = await axios.post('https://mentorpulse.onrender.com/api/auth/setup-admin');
       toast.success('Admin account created! Check console for credentials.');
       console.log('Admin setup response:', response.data);
       

@@ -35,7 +35,7 @@ const WeeklyCalendar = ({ timezone: initialTimezone, onAvailabilityChange }) => 
     try {
       setLoading(true);
       const token = localStorage.getItem('token');
-      const response = await axios.get('http://localhost:5000/api/availability/my-availability', {
+      const response = await axios.get('https://mentorpulse.onrender.com/api/availability/my-availability', {
         headers: { Authorization: `Bearer ${token}` }
       });
 
@@ -103,7 +103,7 @@ const WeeklyCalendar = ({ timezone: initialTimezone, onAvailabilityChange }) => 
     console.log('Saving availability:', { weeklySlots: weeklySlotsMap, exceptions, timezone });
 
     const response = await axios.post(
-      'http://localhost:5000/api/availability',
+      'https://mentorpulse.onrender.com/api/availability',
       {
         weeklySlots: weeklySlotsMap,
         exceptions,

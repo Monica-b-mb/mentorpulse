@@ -10,7 +10,7 @@ const GoalTracker = ({ goals, onGoalUpdate }) => {
     try {
       setUpdatingGoal(goalId);
       const token = localStorage.getItem('token');
-      const response = await fetch(`http://localhost:5000/api/progress/goals/${goalId}/progress`, {
+      const response = await fetch(`https://mentorpulse.onrender.com/api/progress/goals/${goalId}/progress`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
@@ -42,7 +42,7 @@ const GoalTracker = ({ goals, onGoalUpdate }) => {
 
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch(`http://localhost:5000/api/progress/goals/${goalId}`, {
+      const response = await fetch(`https://mentorpulse.onrender.com/api/progress/goals/${goalId}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`

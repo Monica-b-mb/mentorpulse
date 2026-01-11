@@ -49,7 +49,7 @@ const Profile = () => {
     if (user.role === 'mentor' && user._id) {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get(`http://localhost:5000/api/feedback/mentor/${user._id}?limit=3`, {
+        const response = await axios.get(`https://mentorpulse.onrender.com/api/feedback/mentor/${user._id}?limit=3`, {
           headers: {
             'Authorization': `Bearer ${token}`
           }
@@ -85,7 +85,7 @@ const Profile = () => {
         return;
       }
 
-      const response = await axios.get('http://localhost:5000/api/auth/profile', {
+      const response = await axios.get('https://mentorpulse.onrender.com/api/auth/profile', {
         headers: {
           'Authorization': `Bearer ${token}`,
           'Content-Type': 'application/json'
@@ -101,7 +101,7 @@ const Profile = () => {
       // Ensure avatar URL is properly formatted
       let avatarUrl = userData.avatar || '';
       if (avatarUrl && !avatarUrl.startsWith('http') && !avatarUrl.startsWith('/')) {
-        avatarUrl = `http://localhost:5000${avatarUrl.startsWith('/') ? '' : '/'}${avatarUrl}`;
+        avatarUrl = `https://mentorpulse.onrender.com/api${avatarUrl.startsWith('/') ? '' : '/'}${avatarUrl}`;
       }
 
       setFormData({
@@ -132,7 +132,7 @@ const Profile = () => {
       console.log('📤 Uploading avatar...', file);
 
       const response = await axios.post(
-        'http://localhost:5000/api/auth/upload-avatar',
+        'https://mentorpulse.onrender.com/api/auth/upload-avatar',
         uploadFormData,
         {
           headers: {
@@ -153,7 +153,7 @@ const Profile = () => {
         
         let avatarUrl = updatedUser.avatar || '';
         if (avatarUrl && !avatarUrl.startsWith('http') && !avatarUrl.startsWith('data:')) {
-          avatarUrl = `http://localhost:5000${avatarUrl.startsWith('/') ? '' : '/'}${avatarUrl}`;
+          avatarUrl = `https://mentorpulse.onrender.com/api${avatarUrl.startsWith('/') ? '' : '/'}${avatarUrl}`;
         }
 
         console.log('🖼️ Final avatar URL:', avatarUrl);
@@ -238,7 +238,7 @@ const Profile = () => {
       });
 
       const response = await axios.put(
-        'http://localhost:5000/api/auth/profile',
+        'https://mentorpulse.onrender.com/api/auth/profile',
         {
           name: user.name, // Keep original name
           designation: formData.designation,
@@ -272,7 +272,7 @@ const Profile = () => {
       // Update formData with the response data
       let avatarUrl = updatedUser.avatar || '';
       if (avatarUrl && !avatarUrl.startsWith('http') && !avatarUrl.startsWith('data:')) {
-        avatarUrl = `http://localhost:5000${avatarUrl.startsWith('/') ? '' : '/'}${avatarUrl}`;
+        avatarUrl = `https://mentorpulse.onrender.com/api${avatarUrl.startsWith('/') ? '' : '/'}${avatarUrl}`;
       }
       
       setFormData({
@@ -417,7 +417,7 @@ const Profile = () => {
         return currentAvatar;
       }
       // If it's a relative path, make it absolute
-      return `http://localhost:5000${currentAvatar.startsWith('/') ? '' : '/'}${currentAvatar}`;
+      return `https://mentorpulse.onrender.com/api${currentAvatar.startsWith('/') ? '' : '/'}${currentAvatar}`;
     }
     
     return '/default-avatar.png';

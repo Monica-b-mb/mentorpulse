@@ -60,7 +60,7 @@ const ChatModule = () => {
         setIsConnecting(true);
 
         const { io } = await import('socket.io-client');
-        const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+        const apiUrl = import.meta.env.VITE_API_URL || 'https://mentorpulse.onrender.com/api';
         
         const newSocket = io(apiUrl, {
           auth: { token },

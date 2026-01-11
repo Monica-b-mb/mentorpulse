@@ -134,7 +134,7 @@ const loadAvailableUsers = async () => {
     const token = localStorage.getItem('token');
     
     // FIXED: CORRECT ENDPOINT - /api/chat/users/available
-    const response = await fetch('http://localhost:5000/api/chat/users/available', {
+    const response = await fetch('https://mentorpulse.onrender.com/api/chat/users/available', {
       headers: {
         'Authorization': `Bearer ${token}`,
         'Content-Type': 'application/json'

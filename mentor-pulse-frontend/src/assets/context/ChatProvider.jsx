@@ -120,7 +120,7 @@ export const ChatProvider = ({ children }) => {
   }, [state]);
 
   // Base API URL
-  const API_BASE = 'http://localhost:5000/api';
+  const API_BASE = 'https://mentorpulse.onrender.com/api';
 
   console.log('🔄 ChatProvider initialized');
 
@@ -179,7 +179,7 @@ export const ChatProvider = ({ children }) => {
         }
 
         const { io } = await import('socket.io-client');
-        const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+        const apiUrl = import.meta.env.VITE_API_URL || 'https://mentorpulse.onrender.com/api';
         
         console.log('🔌 Creating socket connection...');
         const socket = io(apiUrl, {

@@ -22,7 +22,7 @@ const GoalModal = ({ show, onHide, onGoalCreated }) => {
 
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch('http://localhost:5000/api/progress/goals', {
+      const response = await fetch('https://mentorpulse.onrender.com/api/progress/goals', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
