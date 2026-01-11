@@ -60,9 +60,8 @@ const ChatModule = () => {
         setIsConnecting(true);
 
         const { io } = await import('socket.io-client');
-        const apiUrl = import.meta.env.VITE_API_URL || 'https://mentorpulse.onrender.com/api';
-        
-        const newSocket = io(apiUrl, {
+        const socketUrl = (import.meta.env.VITE_SOCKET_URL || 'https://mentor-pulse-backend.onrender.com'); 
+        const newSocket = io(socketUrl, {
           auth: { token },
           transports: ['websocket', 'polling'],
           timeout: 10000,
