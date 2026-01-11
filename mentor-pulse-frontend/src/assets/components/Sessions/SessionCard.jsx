@@ -50,7 +50,7 @@ const SessionCard = ({
 
   // FIXED: Changed to hash URL for Vercel SPA compatibility
   const handleStartChat = () => {
-    const chatUrl = `/#/chat?sessionId=${session._id}&otherUserId=${otherPerson._id}`;
+    const chatUrl = `/chat?sessionId=${session._id}&otherUserId=${otherPerson._id}`;
     window.location.href = chatUrl;
   };
 
