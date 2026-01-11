@@ -1,0 +1,404 @@
+/* Profile Styles - NO FLICKERING VERSION */
+.profile-card {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  margin-bottom: 1.5rem;
+}
+
+/* Remove all hover animations that cause flickering */
+.profile-card:hover {
+  transform: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-avatar {
+  border: 4px solid #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Remove avatar hover animation */
+.profile-avatar:hover {
+  transform: none;
+  border-color: #fff;
+}
+
+/* Professional Badges Container */
+.professional-badges-container {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 40px;
+}
+
+.professional-badge {
+  font-size: 0.85rem;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  white-space: nowrap;
+  line-height: 1.2;
+  margin: 0.125rem;
+  min-width: fit-content;
+  height: 32px;
+}
+
+.skill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.375rem 0.75rem;
+  margin: 0.125rem;
+  line-height: 1.2;
+  height: 28px;
+  border-radius: 6px;
+}
+
+/* Remove all floating and slide animations */
+.floating-btn {
+  animation: none;
+}
+
+.slide-up {
+  animation: none;
+  opacity: 1;
+  transform: none;
+}
+
+.fade-in {
+  animation: none;
+  opacity: 1;
+}
+
+/* Gradient backgrounds */
+.gradient-bg {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Modern form styles */
+.form-control:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.15);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+  transform: none;
+  box-shadow: none;
+}
+
+/* Read-only fields styling */
+.read-only-field {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.read-only-field label {
+  color: #6c757d;
+  font-weight: 500;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.read-only-field p {
+  margin: 0;
+  color: #212529;
+  font-weight: 500;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+/* Avatar Upload Styles */
+.avatar-container {
+  position: relative;
+  display: inline-block;
+}
+
+.avatar-upload-btn {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: 2px solid white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: background 0.2s ease;
+}
+
+.avatar-upload-btn:hover {
+  background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+}
+
+.avatar-upload-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Spinning animation only for loader */
+.spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Feedback & Rating Styles */
+.rating-display-main {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 1rem 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.average-rating {
+  text-align: center;
+}
+
+.rating-number {
+  color: white;
+  font-weight: bold;
+  font-size: 2.5rem;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.star-rating-display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+}
+
+.rating-text {
+  color: #6b7280;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Rating Stats */
+.rating-stats {
+  padding: 1rem 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Rating Distribution */
+.rating-distribution {
+  padding: 1rem 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.distribution-item {
+  padding: 0.25rem 0;
+}
+
+.distribution-bar-container {
+  height: 8px;
+  background-color: #f3f4f6;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.distribution-bar {
+  height: 100%;
+  background: linear-gradient(135deg, #ffc107, #ffb300);
+  border-radius: 4px;
+}
+
+/* Feedback Items */
+.feedback-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.feedback-item {
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 12px;
+  padding: 1.25rem;
+}
+
+.feedback-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.75rem;
+}
+
+.reviewer-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+.reviewer-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.reviewer-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatar-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* Perfect alignment for form controls */
+.form-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #495057;
+}
+
+.form-control {
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+  padding: 0.75rem 1rem;
+}
+
+.form-control:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.15);
+}
+
+/* Card header alignment */
+.card-header {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid #e9ecef;
+  background: #fff;
+}
+
+.card-header h5 {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+/* Media queries for responsive fixes */
+@media (max-width: 768px) {
+  .professional-badges-container {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .professional-badge {
+    width: fit-content;
+    margin: 0.125rem auto;
+  }
+  
+  .card-body {
+    padding: 1rem;
+  }
+  
+  .rating-display-main {
+    padding: 1rem;
+  }
+}
+
+/* Remove all will-change properties that cause flickering */
+.profile-card,
+.profile-avatar,
+.btn-primary,
+.avatar-upload-btn,
+.feedback-item,
+.distribution-bar {
+  will-change: auto;
+}
+
+/* Perfect grid alignment */
+.row {
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
+}
+
+.col-md-5, .col-md-7 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+/* Additional responsive improvements */
+@media (max-width: 576px) {
+  .profile-avatar {
+    width: 100px !important;
+    height: 100px !important;
+  }
+  
+  .avatar-upload-btn {
+    width: 35px;
+    height: 35px;
+    bottom: 8px;
+    right: 8px;
+  }
+  
+  .display-5 {
+    font-size: 1.75rem;
+  }
+  
+  .lead {
+    font-size: 1rem;
+  }
+}
+
+/* Ensure proper image rendering */
+.profile-avatar {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+/* Loading state improvements */
+.spinner-border {
+  display: inline-block;
+}
