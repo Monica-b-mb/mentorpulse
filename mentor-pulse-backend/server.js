@@ -30,7 +30,7 @@ const app = express();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// CORS configuration - More permissive for development
+// CORS configuration - Allow Vercel domain
 app.use(cors({
   origin: function (origin, callback) {
     const allowedOrigins = [
@@ -39,7 +39,8 @@ app.use(cors({
       'http://localhost:3000',
       'http://127.0.0.1:3000',
       'http://localhost:5174',
-      'http://127.0.0.1:5174'
+      'http://127.0.0.1:5174',
+      'https://mentor-pulse.vercel.app'  // ADDED VERCEL DOMAIN
     ];
     // Allow requests with no origin (like mobile apps, curl, postman)
     if (!origin || allowedOrigins.indexOf(origin) !== -1) {
@@ -139,14 +140,15 @@ app.get('/api/chat/test', (req, res) => {
 // Create HTTP server
 const httpServer = createServer(app);
 
-// Socket.io setup
+// Socket.io setup - Allow Vercel domain
 const io = new Server(httpServer, {
   cors: {
     origin: [
       "http://localhost:5173", 
       "http://127.0.0.1:5173", 
       "http://localhost:3000",
-      "http://localhost:5174"
+      "http://localhost:5174",
+      "https://mentor-pulse.vercel.app"  // ADDED VERCEL DOMAIN
     ],
     methods: ["GET", "POST"],
     credentials: true
