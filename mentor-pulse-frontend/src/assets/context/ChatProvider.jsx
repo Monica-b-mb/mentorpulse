@@ -179,7 +179,7 @@ export const ChatProvider = ({ children }) => {
         }
 
         const { io } = await import('socket.io-client');
-        const apiUrl = import.meta.env.VITE_API_URL || 'https://mentorpulse.onrender.com/api';
+        const apiUrl = import.meta.env.VITE_API_URL || 'https://mentorpulse.onrender.com';
         
         console.log('🔌 Creating socket connection...');
         const socket = io(apiUrl, {
